@@ -168,3 +168,35 @@ p {
     }
 
 }
+
+// Enlarge sign --------------------------------
+
+.enlage-sign {
+    display: none;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: $title;
+    font-weight: 600;
+    font-size: 16px;
+    color: $light;
+}
+
+.enlage-icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .enlage-sign {
+        display: flex;
+    }
+
+}
