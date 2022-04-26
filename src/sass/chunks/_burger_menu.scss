@@ -1,0 +1,188 @@
+//  Building section --------------------------------------------------
+
+.burger-menu__ {
+
+    position: relative;
+
+    &list {
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    &__list--active {
+        position: absolute;
+        overflow: auto;
+    }
+
+    &btn {
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &btn::before,
+    &btn::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+    }
+
+    &btn::before {
+        top: 0;
+    }
+
+    &btn::after {
+        bottom: 0;
+        transform: rotate(180deg);
+    }
+
+    &btn span {
+        position: absolute;
+        width: 100%;
+    }
+}
+
+// To lock page scroll ander dropdown menu _________
+
+body.lock {
+    overflow: hidden;
+}
+
+
+
+//  Size and styles ----------------------------------------------------
+
+.burger-menu {
+
+    // Whole block _________________________________
+    margin: 0 45px 0 auto;
+
+    // Burger button _____________________________
+    &__btn {
+        display: none;
+        width: 40px;
+        height: 25px;
+    }
+
+    &__btn::before,
+    &__btn::after {
+        background-color: $dark;
+        height: 3px;
+        left: 0;
+        transition: all .3s ease 0s;
+    }
+
+    &__btn span {
+        background-color: $dark;
+        height: 3px;
+        left: 0;
+        top: 11px;
+    }
+
+    // Burger button "on click" transformation __
+    &__btn--active::before {
+        transform: rotate(45deg);
+        top: 11px;
+    }
+
+    &__btn--active::after {
+        transform: rotate(315deg);
+        bottom: 11px;
+    }
+
+    &__btn--active span {
+        transform: scale(0);
+    }
+
+    // Menu list _________________________________
+    &__list {
+        font-family: $title;
+        font-size: 2.8rem;
+        font-style: normal;
+        font-weight: 400;
+        color: $dark;
+    }
+
+    // Menu list items ___________________________
+    
+    &__item {
+        width: 119px;
+        text-align: center;
+    }
+    
+    &__item:hover {
+        // transform: scale(1.05);
+        // columns: #000;
+        font-weight: 700;
+        text-decoration: underline;
+        transition: all 0.3s;
+    }
+
+}
+
+// Media query ---------------------------------------------------------
+
+@media screen and (max-width: 1280px) {
+
+    .burger-menu {
+
+        // Whole block _________________________________
+        margin: 0 30px 0 auto;
+
+        // Menu list _________________________________
+        &__list {
+            font-size: 2.4rem;
+        }
+
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+
+    .burger-menu {
+
+        // Burger button _____________________________
+        &__btn {
+            display: block;
+        }
+
+        // Menu list _________________________________
+        &__list {
+            position: absolute;
+            flex-direction: column;
+            left: -300px;
+            top: 64px;
+            width: 250px;
+            height: 60vh;
+            background-color: $light;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        // Menu list items ___________________________
+        &__item {
+            margin-bottom: 30px;
+        }
+
+        // Menu list "on click" transformation ________
+        &__list--active {
+            
+            left: 0px;
+            transition: all .5s;
+        }
+    }
+}
+
+@media only screen and (max-width:425px) {
+
+    .burger-menu {
+
+        // Whole block _________________________________
+        margin: 0 15px 0 auto;
+
+    }
+
+}

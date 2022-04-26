@@ -1,0 +1,170 @@
+
+// Constants -----------------------------------
+
+$title: 'Mulish', sans-serif;
+$fancy-title: 'Lobster', cursive;
+$text: 'Open Sans', sans-serif;
+
+
+$dark: #332F29;
+$light: #ffffff;
+$accent: #E3DCD2;
+$subtitle: #7d7d7d;
+$_text:#454545;
+
+// Global settings -----------------------------
+
+html {
+    font-size: 10px;
+}
+
+p {
+    font-family: $text;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 1.36;
+    color: $_text;
+}
+
+.container {
+    max-width: 1600px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+// Title + subtitle ---------------------------
+
+.section-head {
+    
+    &__subtitle {
+        font-family: $title;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4.6rem;
+        letter-spacing: 0.05em;
+        color: $subtitle;
+    }
+
+    &__title {
+        font-family: $fancy-title;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 9rem;
+        letter-spacing: 0.07em;
+        color: $dark;
+        margin-left: 48px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    
+    p {
+        font-size: 2rem;
+    }
+
+    .section-head {
+    
+        &__subtitle {
+            font-size: 3.4rem;
+        }
+    
+        &__title {
+            font-size: 8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    p {
+        font-size: 1.8rem;
+    }
+
+    .section-head {
+    
+        &__subtitle {
+            font-size: 2.8rem;
+        }
+    
+        &__title {
+            font-size: 6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    
+    p {
+        font-size: 1.6rem;
+    }
+
+    .section-head {
+    
+        &__subtitle {
+            font-size: 2rem;
+        }
+    
+        &__title {
+            font-size: 4.2rem;
+        }
+    }
+}
+
+// Text roll button ----------------------------
+
+@media screen and (max-width: 425px) {
+
+    .text {
+
+        &--rolled::before {
+            content: 'Roll down';
+            position: absolute;
+            width: 130px;
+            height: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            bottom: 0;
+            right: 35px;
+        }
+
+        &--rolled::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 0;
+            right: 10px;
+            background-image: url('../img/roll-icon.svg');
+            background-size: cover;
+        }
+
+        &--unrolled::before {
+            content: 'Roll up';
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            bottom: 0;
+            right: 35px;
+        }
+
+        &--unrolled::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: -3px;
+            right: 10px;
+            background-image: url('../img/roll-icon.svg');
+            background-size: cover;
+            transform: rotate(180deg);
+        }
+    }
+
+}

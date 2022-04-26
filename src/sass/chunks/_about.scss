@@ -1,0 +1,119 @@
+
+.about {
+
+    overflow: hidden; // Limits the use of the float property within only this section
+    background-color: $accent;
+    padding: 100px 0 100px;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__section-head {
+        position: absolute;
+        top: 50px;
+        right: 0;
+    }
+
+    &__img {
+        max-width: 600px;
+        max-height: 720px;
+        float: left;
+        margin-right: 80px;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__text {
+        max-width: 800px;
+        padding-top: 235px;
+        margin: 0 0 0 auto;
+        text-indent: 25px;
+    }
+
+    &__text-par {
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    
+    .about {
+
+        padding: 50px 0 50px;
+
+        &__section-head {
+            position: initial;
+            width: fit-content;
+            margin: 0 auto 30px;
+        }
+        
+        &__img {
+            max-width: 47%;
+            float: left;
+            margin-right: 50px;
+        }
+
+        &__text {
+            padding-top: 5px;
+            text-indent: 20px;
+        }
+
+        &__text-par {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .about {
+
+        padding: 20px 0 40px;
+
+        &__section-head {
+            margin: 0 auto 20px;
+        }
+        
+        &__img {
+            margin-right: 20px;
+        }
+
+        &__text-par {
+            margin-top: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .about {
+
+            padding: 20px 0 20px;
+
+        &__section-head {
+            margin: 0 auto 15px;
+        }
+        
+        &__img {
+            float: none;
+            max-width: 67%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__text {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        &__text-par--toggle {
+            display: none;
+        }
+    }
+}
