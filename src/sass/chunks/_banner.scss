@@ -1,0 +1,81 @@
+.banner {
+
+    margin: 25px 0;
+    height: 800px;
+    background-image: url(../img/rolling-pin.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+    &__wrapper {
+        
+    }
+
+    &__title {
+        font-family: $fancy-title;
+        font-weight: 400;
+        font-size: 9rem;
+        text-align: center;
+        letter-spacing: 0.07em;
+        color: #FFFFFF;
+        max-width: 750px;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .banner {
+        height: 650px;
+
+        &__title {
+            font-size: 8rem;
+            max-width: 650px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .banner {
+        height: 500px;
+
+        &__title {
+            font-size: 7rem;
+            max-width: 600px;
+            padding-top: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .banner {
+        height: 450px;
+
+        &__title {
+            padding-top: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .banner {
+        height: 350px;
+
+        &__title {
+            font-size: 5rem;
+            max-width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .banner {
+        display: none;
+    }
+}

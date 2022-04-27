@@ -1,0 +1,29 @@
+
+.copyright {
+
+    background-color: $light;
+
+    &__wrapper {
+        border-top: 1px solid $dark;
+        padding: 10px 0;
+
+    }
+
+    &__link {
+        display: block;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    &__text {
+        display: block;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 11px;
+        color: $dark;
+        text-align: center;
+    }
+
+    &__text:last-child {
+        margin-top: 5px;
+    }
+}
