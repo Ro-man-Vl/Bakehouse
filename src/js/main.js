@@ -10,7 +10,20 @@ $(function() {
 
   });
 
-  // Text popup
+  // --------------- Collapse menu after click ------------------------------
+  $('.burger-menu__item').on('click', function() {
+    
+    let isActive = $(this).parent().hasClass('burger-menu__list--active');
+
+    if(isActive) {
+      $(this).parent().removeClass('burger-menu__list--active');
+      $(this).parent().siblings().removeClass('burger-menu__btn--active');
+      $('body').removeClass('lock');
+    }
+
+  });
+
+  // Text popup -------------------------------------------------------------
 
   const mediaQueryList = window.matchMedia('(max-width: 425px)');
 
