@@ -1,7 +1,7 @@
 
 .price {
     background-color: $dark;
-    padding: 100px 0;
+    padding: $section-gap 0;
 
     &__section-head {
         width: fit-content;

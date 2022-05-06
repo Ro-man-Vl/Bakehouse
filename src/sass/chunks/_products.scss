@@ -1,7 +1,7 @@
 
 .products {
     background-color: $light;
-    padding: 100px 0;
+    padding: $section-gap 0;
 
     &__section-head {
         width: fit-content;
@@ -25,6 +25,7 @@
     &__gallery-box {
         display: flex;
         flex-direction: column;
+        flex-basis: 500px;
     }
 
     &__gallery-box--1,
@@ -37,7 +38,7 @@
     }
 
     &__gallery-item {
-        max-width: 500;
+        max-width: 500px;
     }
 
     &__gallery-img {
@@ -45,6 +46,10 @@
         width: 100%;
         height: 100%;
     }
+}
+
+.fancybox__thumb {
+    background-size: cover;
 }
 
 @media screen and (max-width: 1280px) {

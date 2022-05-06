@@ -3,7 +3,7 @@
 
     overflow: hidden; // Limits the use of the float property within only this section
     background-color: $accent;
-    padding: 100px 0 100px;
+    padding: $section-gap 0 $section-gap;
 
     &__wrapper {
         position: relative;

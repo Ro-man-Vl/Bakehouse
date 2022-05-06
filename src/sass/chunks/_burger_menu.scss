@@ -43,14 +43,6 @@
     }
 }
 
-// To lock page scroll ander dropdown menu _________
-
-body.lock {
-    overflow: hidden;
-}
-
-
-
 //  Size and styles ----------------------------------------------------
 
 .burger-menu {
@@ -140,6 +132,12 @@ body.lock {
 }
 
 @media only screen and (max-width:768px) {
+
+    // To lock page scroll ander dropdown menu _________
+
+    body.lock {
+        overflow: hidden;
+    }
 
     .burger-menu {
 

@@ -2,7 +2,7 @@
 .hero {
 
     overflow: hidden; // Limits the use of the float property within only this section
-    padding: 50px 0 100px; 
+    padding: calc($section-gap / 2) 0 $section-gap; 
 
     &__wrapper {
         position: relative;
