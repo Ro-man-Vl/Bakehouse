@@ -26,9 +26,9 @@ const js = () => {
             }))
         }))
         .pipe(concat('main.min.js'))
-        .pipe(gulpif(app.isProd, size({title:"JS file before compression:"})))
-        .pipe(gulpif(app.isProd, uglify()))
-        .pipe(gulpif(app.isProd, size({title:"JS file after compression:"})))
+        // .pipe(gulpif(app.isProd, size({title:"JS file before compression:"})))
+        // .pipe(gulpif(app.isProd, uglify()))
+        // .pipe(gulpif(app.isProd, size({title:"JS file after compression:"})))
         .pipe(dest(path.js.dest))      
 }
 
